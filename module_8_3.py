@@ -8,12 +8,12 @@ class IncorrectCarNumbers(Exception):
 
 class Car:
 
-    def __init___(self, model_name: str, vin: int, numbers: str):
+    def __init__(self, model_name: str, vin: int, numbers: str):
         self.model = model_name
-        #if __is_valid_vin(vin):
-        self.__vin = vin
-        #i# __is_valid_numbers(numbers):
-        self.__numbers = numbers
+        if self.__is_valid_vin(vin):
+            self.__vin = vin
+        if self.__is_valid_numbers(numbers):
+            self.__numbers = numbers
 
     def __is_valid_vin(vin_number):
         """проверяет vin_number на корректность."""
